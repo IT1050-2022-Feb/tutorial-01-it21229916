@@ -18,7 +18,27 @@ Amount = 30 x 50 + (50-30) x 40 = 2300*/
 
 #include <stdio.h>
 
-int main() {
-  
+int main()
+{
+  int distance, amount; //variable declaration
+
+  printf("Enter the Distance:- "); //getting distance
+  scanf("%d",&distance);
+
+  if (distance <= 30) //selection one
+  {
+    amount = distance * 50; //calculate amount for selection one
+  }
+  if (distance > 30) //selection two
+  {
+    amount = 30 * 50 + (distance - 30) * 40; //calculate amonut for selection two
+  }
+  else
+  {
+    printf("Invalid Input..."); //error message
+  }
+
+  printf("Total Amount is:- %d",amount); //print the final amonut
+
   return 0;
 }
